@@ -13,7 +13,6 @@ def hello_world(request):
     ))
 
 
-
 def sort_integers(request):
     """Return a JSON response with sorted integers."""
     numbers = [int(i) for i in request.GET['numbers'].split(',')]
