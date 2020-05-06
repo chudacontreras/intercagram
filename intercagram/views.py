@@ -33,5 +33,5 @@ def say_hi(request, name, age):
     if age < 12:
         message = 'Sorry {}, you are not allowed here'.format(name)
     else:
-        message = 'Hello, {}! Welcome to Platzigram'.format(name)
+        message = 'Hello, {}! Welcome to Intercagram'.format(name)
     return HttpResponse(message)
