@@ -3,13 +3,12 @@
 
 from django.contrib import admin
 from django.urls import path
-from django.http import HttpResponse
+from intercagram import views
 
-def hello_world(request):
-    """Return a greeting."""
-    return HttpResponse('Hello, world!')
 
 urlpatterns = [
     #path('admin/', admin.site.urls),
-    path('hello-world/', hello_world),
+    path('hello-world/', views.hello_world),
+    #path('server-time/', views.server_time),
+    path('hi/', views.hi),
 ]
