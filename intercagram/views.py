@@ -19,6 +19,7 @@ def server_time(request):
 
 def hi(request):
     """Hi."""
+    
     #import pdb; pdb.set_trace()
     #return HttpResponse('Hi!')
     numbers = request.GET['numbers']
