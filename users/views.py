@@ -39,7 +39,7 @@ def signup(request):
 
         if passwd != passwd_confirmation:
             return render(request, 'users/signup.html', {'error': 'Password confirmation does not match'})
-
+        #import pdb; pdb.set_trace()
         try:
             user = User.objects.create_user(username=username, password=passwd)
         except IntegrityError:
