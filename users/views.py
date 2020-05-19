@@ -15,6 +15,8 @@ from users.models import Profile
 # Forms
 from users.forms import ProfileForm
 
+
+@login_required
 def update_profile(request):
     """Update a user's profile view."""
     profile = request.user.profile
@@ -60,6 +62,7 @@ def login_view(request):
 
     return render(request, 'users/login.html')
 
+
 def signup(request):
     """Sign up view."""
     if request.method == 'POST':
@@ -69,7 +72,7 @@ def signup(request):
 
         if passwd != passwd_confirmation:
             return render(request, 'users/signup.html', {'error': 'Password confirmation does not match'})
-        #import pdb; pdb.set_trace()
+
         try:
             user = User.objects.create_user(username=username, password=passwd)
         except IntegrityError:
