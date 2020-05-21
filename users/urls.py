@@ -37,6 +37,6 @@ urlpatterns = [
         route='users/me/profile/',
         view=views.update_profile,
         name='update_profile'
-    )
+    ),
 
 ]
