@@ -8,4 +8,3 @@ class UsersConfig(AppConfig):
 
     name = 'users'
     verbose_name = 'Users'
-    
